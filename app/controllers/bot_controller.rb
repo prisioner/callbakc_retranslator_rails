@@ -1,4 +1,6 @@
 class BotController < ApplicationController
+  skip_forgery_protection
+
   def command
     CommandExecutor.call(params)
 
