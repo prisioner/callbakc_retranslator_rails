@@ -1,6 +1,6 @@
 class CommandExecutor
   def self.call(*args)
-    new(args).call
+    new(*args).call
   end
 
   def initialize(params)
@@ -11,8 +11,8 @@ class CommandExecutor
     return unless params[:message]
     return unless params[:message][:text] == "/start"
 
-    chat_id = parsed_body[:message][:chat][:id]
-    username = parsed_body[:message][:chat][:username]
+    chat_id = params[:message][:chat][:id]
+    username = params[:message][:chat][:username]
 
     TelegramClient.send_message(
       chat_id,

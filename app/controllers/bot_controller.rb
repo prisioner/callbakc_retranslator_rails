@@ -4,12 +4,12 @@ class BotController < ApplicationController
   def command
     CommandExecutor.call(params)
 
-    render status: :ok
+    head :ok
   end
 
   def callback
     CallbackProcessor.call(request, params)
 
-    render status: :ok
+    head :ok
   end
 end

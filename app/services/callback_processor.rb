@@ -1,6 +1,6 @@
 class CallbackProcessor
   def self.call(*args)
-    new(args).call
+    new(*args).call
   end
 
   def initialize(request, params)
