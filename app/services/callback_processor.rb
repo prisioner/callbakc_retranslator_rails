@@ -23,6 +23,7 @@ class CallbackProcessor
       chat_id,
       <<~MESSAGE
         #{"FROM: #{message_source}" if message_source}
+
         ```
         #{RspecApiDocumentation::Curl.new('POST', '/', body, headers).output('https://example.org')}
         ```

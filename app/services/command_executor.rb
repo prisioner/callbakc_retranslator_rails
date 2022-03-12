@@ -18,6 +18,7 @@ class CommandExecutor
       chat_id,
       <<~MESSAGE
         Use provided URL for your POST callback retranslation:
+
         ```
         #{ENV['HOST_URL']}/p/#{chat_id}/#{username}/?:scope/
         ```
