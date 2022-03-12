@@ -25,4 +25,8 @@ class CommandExecutor
       MESSAGE
     )
   end
+
+  private
+
+  attr_reader :params
 end
